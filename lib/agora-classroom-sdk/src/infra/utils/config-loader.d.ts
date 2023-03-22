@@ -1,0 +1,10 @@
+import { EduRoomTypeEnum } from 'agora-edu-core';
+import { FcrTheme } from '~ui-kit';
+import { FcrMultiThemes, FcrUIConfig } from '../types/config';
+export declare const themes: Record<string, FcrMultiThemes>;
+export declare const uiConfigs: Record<string, FcrUIConfig>;
+export declare const supportedRoomTypes: EduRoomTypeEnum[];
+export declare const loadTheme: (key: string, theme: FcrMultiThemes) => void;
+export declare const loadUIConfig: (roomType: EduRoomTypeEnum, config: FcrUIConfig) => void;
+export declare const applyTheme: (theme: FcrTheme) => void;
+export declare const loadGeneratedFiles: () => void;

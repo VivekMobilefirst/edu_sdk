@@ -1,0 +1,67 @@
+import { AgoraWidgetController } from 'agora-edu-core';
+import { BoardConnectionState, BoardMountState, FcrBoardShape, FcrBoardTool } from './type';
+export declare class Board {
+    private logger;
+    private _controller?;
+    grantedUsers: Set<string>;
+    connState: BoardConnectionState;
+    mountState: BoardMountState;
+    undoSteps: number;
+    redoSteps: number;
+    pageIndex: number;
+    pageCount: number;
+    strokeColor: {
+        r: number;
+        g: number;
+        b: number;
+    };
+    strokeWidth: number;
+    selectedTool?: FcrBoardTool | undefined;
+    selectedShape?: FcrBoardShape;
+    get connected(): boolean;
+    get mounted(): boolean;
+    enable(): void;
+    disable(): void;
+    addPage(): void;
+    removePage(): void;
+    gotoPage(index: number): void;
+    undo(): void;
+    redo(): void;
+    clean(): void;
+    putImageResource(url: string, pos?: {
+        x: number;
+        y: number;
+        width: number;
+        height: number;
+    }): void;
+    putImageResourceIntoWindow(src: string): void;
+    selectTool(tool: FcrBoardTool): void;
+    drawShape(shape: FcrBoardShape): void;
+    grantPrivilege(userUuid: string, granted: boolean): void;
+    changeStrokeWidth(strokeWidth: number): void;
+    changeStrokeColor(color: {
+        r: number;
+        g: number;
+        b: number;
+    }): void;
+    loadAttributes(): void;
+    saveAttributes(): void;
+    getSnapshotImageList(): void;
+    setDelay(delay: number): void;
+    hasPrivilege(): boolean;
+    install(controller: AgoraWidgetController): void;
+    uninstall(): void;
+    private _handleRequestGrantedList;
+    private _handleDragOver;
+    private _handleDrop;
+    private _handleRedoStepsChanged;
+    private _handleUndoStepsChanged;
+    private _handlePageInfoChanged;
+    private _handleGrantedUpdate;
+    private _handleSnapshotImageReceived;
+    private _handleConnStateChanged;
+    private _handleMountStateChanged;
+    private _resetTool;
+    private _waitReply;
+    private _sendBoardCommandMessage;
+}

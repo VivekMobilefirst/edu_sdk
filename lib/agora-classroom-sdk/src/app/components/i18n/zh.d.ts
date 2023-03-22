@@ -1,0 +1,21 @@
+declare const _default: {
+    home_product_name: string;
+    home_greeting: string;
+    home_form_field_room: string;
+    home_form_field_name: string;
+    home_form_field_role: string;
+    home_form_field_type: string;
+    home_form_field_duration: string;
+    home_form_submit: string;
+    home_form_placeholder_room_name: string;
+    home_form_placeholder_user_name: string;
+    home_form_placeholder_user_role: string;
+    home_form_placeholder_room_type: string;
+    home_form_error_room_name_empty: string;
+    home_form_error_user_name_empty: string;
+    home_form_error_role_type_empty: string;
+    home_form_error_room_type_empty: string;
+    home_form_error_room_name_limit: string;
+    home_form_error_user_name_limit: string;
+};
+export default _default;

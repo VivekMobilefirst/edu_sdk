@@ -1,0 +1,21 @@
+import { CourseWareItem } from '@/infra/api';
+import { CloudDriveResource } from 'agora-edu-core';
+export declare type ConversionOption = {
+    type: string;
+    preview: boolean;
+    scale: number;
+    outputFormat: string;
+    canvasVersion: boolean;
+};
+export declare const h5Type = "ah5";
+export declare const linkType = "alf";
+export declare const imageTypes: string[];
+export declare const mediaVideoTypes: string[];
+export declare const mediaAudioTypes: string[];
+export declare const convertableTypes: string[];
+export declare const convertableDynamicTypes: string[];
+export declare const supportedTypes: string[];
+export declare const createCloudResource: (data: CourseWareItem) => CloudDriveResource | never;
+export declare const conversionOption: (ext: string, scale?: number | undefined) => ConversionOption | undefined;
+export declare const extractFileExt: (name: string) => string | undefined;
+export declare const fileExt2ContentType: (fileExt: string) => string;

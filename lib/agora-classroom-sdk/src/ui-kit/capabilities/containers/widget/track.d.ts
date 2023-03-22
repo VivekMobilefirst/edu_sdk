@@ -1,0 +1,22 @@
+import React from 'react';
+import { Dimensions, Point, Track, TrackOptions } from 'agora-edu-core';
+declare type TrackSyncingProps = {
+    draggable: boolean;
+    resizable: boolean;
+    controlled: boolean;
+    handle?: string;
+    cancel?: string;
+    syncOn?: 'drag' | 'drop';
+    minWidth?: number;
+    minHeight?: number;
+    maxWidth?: number;
+    maxHeight?: number;
+    boundaryName?: string;
+    children?: React.ReactNode;
+    zIndex?: number;
+    track: Track;
+    onChange: (end: boolean, pos: Point, dimensions?: Dimensions, options?: TrackOptions) => void;
+    onZIndexChange: () => void;
+};
+export declare const TrackCore: React.FC<TrackSyncingProps>;
+export {};

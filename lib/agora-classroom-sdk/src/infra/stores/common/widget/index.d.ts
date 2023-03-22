@@ -1,0 +1,37 @@
+import { AgoraWidgetBase } from '@/infra/api';
+import { EduUIStoreBase } from '../base';
+export declare class WidgetUIStore extends EduUIStoreBase {
+    private _disposers;
+    private _registeredWidgets;
+    private _widgetInstances;
+    private _stateListener;
+    get ready(): boolean;
+    get registeredWidgetNames(): string[];
+    get widgetInstanceList(): AgoraWidgetBase[];
+    get z0Widgets(): AgoraWidgetBase[];
+    get z10Widgets(): AgoraWidgetBase[];
+    createWidget(widgetId: string, defaults?: Record<'properties' | 'userProperties' | 'trackProperties', any>): void;
+    destroyWidget(widgetId: string): void;
+    private _extractWidgetNameId;
+    private _handleWidgetActive;
+    private _handleWidgetInactive;
+    private _handlePropertiesUpdate;
+    private _handleUserPropertiesUpdate;
+    private _handleTrackUpdate;
+    private _callWidgetCreate;
+    private _callWidgetSetInstanceId;
+    private _callWidgetPropertiesUpdate;
+    private _callWidgetUserPropertiesUpdate;
+    private _callWidgetDestroy;
+    private _callWidgetUpdateTrack;
+    private _getWidgetTrackMode;
+    private _callWidgetInstall;
+    private _callWidgetUninstall;
+    private _installWidgets;
+    private _uninstallWidgets;
+    private _handleBecomeActive;
+    private _handleBecomeInactive;
+    private _getEnabledWidgets;
+    onInstall(): void;
+    onDestroy(): void;
+}
