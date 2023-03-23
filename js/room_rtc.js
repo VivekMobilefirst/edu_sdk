@@ -35,6 +35,8 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
+import AgoraRTM from 'agora-rtm-sdk';
+
 // Initial Room
 let joinRoomInit = async () => {
     // Real time messaging
