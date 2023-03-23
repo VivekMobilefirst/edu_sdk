@@ -35,7 +35,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
-import AgoraRTM from 'agora-rtm-sdk';
+import { AgoraRTM } from "/path/to/agora-rtm-sdk";
 
 // Initial Room
 let joinRoomInit = async () => {
