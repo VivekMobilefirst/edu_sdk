@@ -37,7 +37,10 @@ let sharingScreen = false;
 
 window.onload = function() {
   // code that uses the AgoraRTM object
+    alert("on load");
+}
 
+require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js', function(agora) {
 // Initial Room
 var joinRoomInit = async () => {
 //     const AgoraRTM = require('agora-rtm-sdk')
