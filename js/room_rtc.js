@@ -39,7 +39,7 @@ window.onload = function() {
   // code that uses the AgoraRTM object
 
 // Initial Room
-let joinRoomInit = async () => {
+var joinRoomInit = async () => {
 //     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
     rtmClient = await AgoraRTM.createInstance(APP_ID)
