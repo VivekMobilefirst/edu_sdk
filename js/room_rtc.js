@@ -35,7 +35,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
-window.onload = function() {
+window.onload = async function() {
   // code that uses the AgoraRTM object
     alert("on load");
 
