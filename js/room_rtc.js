@@ -7,7 +7,7 @@ if (!uid) {
     sessionStorage.setItem('uid',uid)
 }
 
-let token = "007eJxTYHgteUDqU7/D7PNHr+areaZ+t1JkYBfa2PWk76HJiatz7RMVGBItEy2NE5ONzFMNLUxSU02SUoyNjU0tzJKSLQ1S09Is91fJpjQEMjKsOGrFwsjAysAIhCC+CoO5hUWqhVGagW5ScmqKrqEhkEhMSUvTNUoxSEpMMU4zsjC3BADKZSj7";
+let token = "007eJxTYGATnqt8/cK1Tx+5Kmb+8NrA06ZVrXh9x1S/CSVvIgvDLh1WYEi0TLQ0Tkw2Mk81tDBJTTVJSjE2Nja1MEtKtjRITUuzTKiTTWkIZGRYNPEtKyMDBIL4LAwlqcUlDAwArpMhFA==";
 let client;
 
 let rtmClient;
