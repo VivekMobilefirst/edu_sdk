@@ -37,7 +37,7 @@ let sharingScreen = false;
 
 // Initial Room
 let joinRoomInit = async () => {
-    const AgoraRTM = require('agora-rtm-sdk')
+//     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
     rtmClient = await AgoraRTM.createInstance(APP_ID)
     await rtmClient.login({uid,token})
