@@ -36,8 +36,6 @@ let localScreenTracks;
 let sharingScreen = false;
 
 window.onload = async function() {
-  // code that uses the AgoraRTM object
-    alert("on load");
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
