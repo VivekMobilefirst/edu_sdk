@@ -35,6 +35,9 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
+window.onload = function() {
+  // code that uses the AgoraRTM object
+
 // Initial Room
 let joinRoomInit = async () => {
 //     const AgoraRTM = require('agora-rtm-sdk')
@@ -61,6 +64,7 @@ let joinRoomInit = async () => {
     client.on('user-published',handleUserPublished)
     client.on('user-left',handleUserLeft)
 }
+};
 // ask a user for access for microphone and camera permission (stored as array)
 let joinStrem = async () => {
     // hide the join button and display the 
