@@ -11,7 +11,7 @@ let token = null;
 let client;
 
 let rtmClient;
-let channel;
+var channel;
 
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
