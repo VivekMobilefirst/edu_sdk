@@ -38,11 +38,10 @@ let sharingScreen = false;
 window.onload = function() {
   // code that uses the AgoraRTM object
     alert("on load");
-}
 
-require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
+// require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
-var joinRoomInit = async () => {
+// var joinRoomInit = async () => {
 //     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
     rtmClient = await AgoraRTM.createInstance(APP_ID)
@@ -66,8 +65,9 @@ var joinRoomInit = async () => {
     // Every time a user published or left, listen to that and call handleUserPublished
     client.on('user-published',handleUserPublished)
     client.on('user-left',handleUserLeft)
-}
-};
+// }
+// }
+};   
 // ask a user for access for microphone and camera permission (stored as array)
 let joinStrem = async () => {
     // hide the join button and display the 
@@ -280,5 +280,5 @@ document.getElementById('mic-btn').addEventListener('click',toggleMic)
 document.getElementById('screen-btn').addEventListener('click',toggleScreen)
 document.getElementById('join-btn').addEventListener('click',joinStrem)
 document.getElementById('leave-btn').addEventListener('click',leaveStream)
-joinRoomInit()
+// joinRoomInit()
 
