@@ -35,8 +35,6 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
-client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'});
-
 window.onload = async function() {
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
@@ -59,7 +57,7 @@ window.onload = async function() {
     getMembers()
     addBotMessageToDom(`${displayName} joined the room`)
     // Real time video and audio
-//     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
+    client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
     await client.join(APP_ID, roomId, token, uid)
 
     // Every time a user published or left, listen to that and call handleUserPublished
@@ -94,13 +92,15 @@ let joinStrem = async () => {
     // Audio track is stored at index 0 and video track stored at index 1
     localTracks[1].play(`user-${uid}`)
     
-    if (uid != "") {
+    if (client !== undifined) {
     console.log("uid",uid,client);
     console.log("localTracks[0]",localTracks[0]);
     console.log("localTracks[1]",localTracks[1]);
-
+    alert('client fetching');
     // publish the local track to others
    await client.publish([localTracks[0],localTracks[1]])
+  } else {
+    alert('client not fetching');
   }
 }
 
