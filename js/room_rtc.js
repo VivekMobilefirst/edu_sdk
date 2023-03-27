@@ -10,7 +10,7 @@ if (!uid) {
 
 let token = null;
 // let client;
-var client = AgoraRTC.createClient({mode: 'live', codec: 'h264'});
+var client;
 
 let rtmClient;
 var channel;
@@ -49,6 +49,7 @@ window.onload = async function() {
     // add user's displayName
     await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
 
+    client; = AgoraRTC.createClient({mode: 'live', codec: 'h264'});
         // join the roomId channel
     channel = await rtmClient.createChannel(roomId)
     await channel.join()
