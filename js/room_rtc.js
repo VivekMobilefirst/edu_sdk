@@ -93,9 +93,9 @@ let joinStrem = async () => {
     localTracks[1].play(`user-${uid}`)
     
     if (uid != "") {
-    alert(uid);
-    alert(localTracks[0]);
-    alert(localTracks[1]);
+    console.log("uid",uid);
+    console.log("localTracks[0]",localTracks[0]);
+    console.log("localTracks[1]",localTracks[1]);
 
     // publish the local track to others
    await client.publish([localTracks[0],localTracks[1]])
