@@ -93,7 +93,7 @@ let joinStrem = async () => {
     localTracks[1].play(`user-${uid}`)
     
     if (uid != "") {
-    console.log("uid",uid);
+    console.log("uid",uid,client);
     console.log("localTracks[0]",localTracks[0]);
     console.log("localTracks[1]",localTracks[1]);
 
