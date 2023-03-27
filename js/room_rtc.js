@@ -35,6 +35,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
+
 window.onload = async function() {
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
@@ -57,7 +58,7 @@ window.onload = async function() {
     getMembers()
     addBotMessageToDom(`${displayName} joined the room`)
     // Real time video and audio
-    client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
+//     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
     await client.join(APP_ID, roomId, token, uid)
 
     // Every time a user published or left, listen to that and call handleUserPublished
