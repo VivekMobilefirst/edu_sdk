@@ -9,7 +9,8 @@ if (!uid) {
 }
 
 let token = null;
-let client;
+// let client;
+var client = AgoraRTC.createClient({mode: 'live', codec: 'h264'});
 
 let rtmClient;
 var channel;
@@ -58,7 +59,7 @@ window.onload = async function() {
     getMembers()
     addBotMessageToDom(`${displayName} joined the room`)
     // Real time video and audio
-    client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
+//     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
     await client.join(APP_ID, roomId, token, uid)
 
     // Every time a user published or left, listen to that and call handleUserPublished
