@@ -35,6 +35,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
+client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'});
 
 window.onload = async function() {
 
