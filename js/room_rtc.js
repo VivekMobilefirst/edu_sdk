@@ -91,8 +91,15 @@ let joinStrem = async () => {
 
     // Audio track is stored at index 0 and video track stored at index 1
     localTracks[1].play(`user-${uid}`)
+    
+    if (uid != "") {
+    alert(uid);
+    alert(localTracks[0]);
+    alert(localTracks[1]);
+
     // publish the local track to others
-    await client.publish([localTracks[0],localTracks[1]])
+   await client.publish([localTracks[0],localTracks[1]])
+  }
 }
 
 let switchToCamera = async() => {
