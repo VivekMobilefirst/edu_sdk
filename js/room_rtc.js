@@ -92,7 +92,7 @@ let joinStrem = async () => {
     // Audio track is stored at index 0 and video track stored at index 1
     localTracks[1].play(`user-${uid}`)
     
-    if (client !== undifined) {
+    if (client !== undefined) {
     console.log("uid",uid,client);
     console.log("localTracks[0]",localTracks[0]);
     console.log("localTracks[1]",localTracks[1]);
