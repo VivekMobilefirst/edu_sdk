@@ -53,7 +53,7 @@ window.onload = async function() {
     // add user's displayName
     await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
 
-    client = AgoraRTC.createClient({mode: 'live', codec: 'h264'});
+//     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'});
         // join the roomId channel
     channel = await rtmClient.createChannel(roomId)
     await channel.join()
@@ -64,7 +64,7 @@ window.onload = async function() {
     getMembers()
     addBotMessageToDom(`${displayName} joined the room`)
     // Real time video and audio
-//     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
+    client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
     await client.join(APP_ID, roomId, token, uid)
 
     // Every time a user published or left, listen to that and call handleUserPublished
