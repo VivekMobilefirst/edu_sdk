@@ -40,7 +40,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
-window.onload = async function() {
+let joinRoomInit = async () => {
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
@@ -294,4 +294,4 @@ document.getElementById('mic-btn').addEventListener('click',toggleMic)
 document.getElementById('screen-btn').addEventListener('click',toggleScreen)
 document.getElementById('join-btn').addEventListener('click',joinStrem)
 document.getElementById('leave-btn').addEventListener('click',leaveStream)
-// joinRoomInit()
+joinRoomInit()
