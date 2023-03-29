@@ -42,11 +42,13 @@ let sharingScreen = false;
 
 alert("window load")
 // window.onload = async function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Your code that uses the AgoraRTM object here
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
 // var joinRoomInit = async () => {
-    import AgoraRTM from 'agora-rtm-sdk'
+//     import AgoraRTM from 'agora-rtm-sdk'
     // Real time messaging
     rtmClient = AgoraRTM.createInstance(APP_ID)
      rtmClient.login({ uid: uidRTM, token: tokenRTM })
@@ -74,6 +76,7 @@ alert("window load")
 // }
 // }
 // };   
+    });
 // ask a user for access for microphone and camera permission (stored as array)
 let joinStrem = async () => {
     // hide the join button and display the 
