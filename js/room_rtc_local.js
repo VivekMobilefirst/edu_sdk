@@ -28,10 +28,10 @@ if (!roomId) {
     roomId = 'main'
 }
 
-// let displayName = sessionStorage.getItem('display_name')
-// if (!displayName) {
-//     window.location.href = '/'
-// }
+let displayName = sessionStorage.getItem('display_name')
+if (!displayName) {
+    window.location.href = '/'
+}
 
 // audio and video stream
 let localTracks = []
