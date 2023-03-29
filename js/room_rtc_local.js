@@ -66,7 +66,7 @@ window.onload = async function() {
     // Real time video and audio
     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
     await client.join(APP_ID, roomId, token, uid)
-
+    console.log('client', client)
     // Every time a user published or left, listen to that and call handleUserPublished
     client.on('user-published',handleUserPublished)
     client.on('user-left',handleUserLeft)
