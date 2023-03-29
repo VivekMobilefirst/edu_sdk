@@ -40,6 +40,7 @@ let remoteUsers = {}
 let localScreenTracks;
 let sharingScreen = false;
 
+var AgoraRTM = new AgoraRTM;
 alert("window load")
 // window.onload = async function() {
 document.addEventListener('DOMContentLoaded', function() {
