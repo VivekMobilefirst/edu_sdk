@@ -48,7 +48,7 @@ window.onload = async function() {
 //     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
     rtmClient = await AgoraRTM.createInstance(APP_ID)
-    await rtmClient.login({uidRTM, tokenRTM})
+    await rtmClient.login({ uid: uidRTM, token: tokenRTM })
     // add user's displayName
     await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
 
