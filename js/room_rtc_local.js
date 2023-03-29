@@ -8,6 +8,9 @@ if (!uid) {
     sessionStorage.setItem('uid',uid)
 }
 
+let tokenRTM = "006a9a93ac27e184ee4bd333586bc90eff9IAAG4Jxo77ddUCy7JPr7xqwcbGpcCZxN1RPYdofJ4aus0QZ6H1MAAAAAEAAISHlNdkMlZAEA6AN24Fpk";
+let uidRTM = "test_user_id1008";
+
 let token = null;
 // let client;
 var client;
@@ -45,7 +48,7 @@ window.onload = async function() {
 //     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
     rtmClient = await AgoraRTM.createInstance(APP_ID)
-    await rtmClient.login({"test_user_id1008", "006a9a93ac27e184ee4bd333586bc90eff9IAAG4Jxo77ddUCy7JPr7xqwcbGpcCZxN1RPYdofJ4aus0QZ6H1MAAAAAEAAISHlNdkMlZAEA6AN24Fpk"})
+    await rtmClient.login({uidRTM, tokenRTM})
     // add user's displayName
     await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
 
