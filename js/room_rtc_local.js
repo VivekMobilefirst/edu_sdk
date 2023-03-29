@@ -48,16 +48,16 @@ alert("window load")
 // var joinRoomInit = async () => {
 //     const AgoraRTM = require('agora-rtm-sdk')
     // Real time messaging
-    rtmClient = await AgoraRTM.createInstance(APP_ID)
-    await rtmClient.login({ uid: uidRTM, token: tokenRTM })
+    rtmClient = AgoraRTM.createInstance(APP_ID)
+     rtmClient.login({ uid: uidRTM, token: tokenRTM })
     console.log('rtmClient', rtmClient)
     // add user's displayName
-    await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
+     rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
 
 //     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'});
         // join the roomId channel
-    channel = await rtmClient.createChannel(roomId)
-    await channel.join()
+    channel =  rtmClient.createChannel(roomId)
+     channel.join()
     // handleMemberJoined implemented in room_rtm.js
     channel.on('MemberJoined', handleMemberJoined)
     channel.on('MemberLeft', handleMemberLeft)
@@ -66,7 +66,7 @@ alert("window load")
     addBotMessageToDom(`${displayName} joined the room`)
     // Real time video and audio
     client = AgoraRTC.createClient({mode:'rtc',codec:'vp8'})
-    await client.join(APP_ID, roomId, token, uid)
+     client.join(APP_ID, roomId, token, uid)
     console.log('client', client)
     // Every time a user published or left, listen to that and call handleUserPublished
     client.on('user-published',handleUserPublished)
