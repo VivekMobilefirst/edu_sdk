@@ -46,7 +46,7 @@ alert("window load")
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
 // var joinRoomInit = async () => {
-//     const AgoraRTM = require('agora-rtm-sdk')
+    import AgoraRTM from 'agora-rtm-sdk'
     // Real time messaging
     rtmClient = AgoraRTM.createInstance(APP_ID)
      rtmClient.login({ uid: uidRTM, token: tokenRTM })
