@@ -8,8 +8,8 @@ if (!uid) {
     sessionStorage.setItem('uid',uid)
 }
 
-let tokenRTM = "006a9a93ac27e184ee4bd333586bc90eff9IAAG4Jxo77ddUCy7JPr7xqwcbGpcCZxN1RPYdofJ4aus0QZ6H1MAAAAAEAAISHlNdkMlZAEA6AN24Fpk";
-let uidRTM = "test_user_id1008";
+let tokenRTM = '006a9a93ac27e184ee4bd333586bc90eff9IAAG4Jxo77ddUCy7JPr7xqwcbGpcCZxN1RPYdofJ4aus0QZ6H1MAAAAAEAAISHlNdkMlZAEA6AN24Fpk';
+let uidRTM = 'test_user_id1008';
 
 let token = null;
 // let client;
