@@ -41,7 +41,7 @@ let localScreenTracks;
 let sharingScreen = false;
 
 alert("window load")
-window.onload = async function() {
+// window.onload = async function() {
 
 // require('https://edu-sdk.vercel.app/js/agora-rtm-sdk-1.5.1.js'), function(agora) {
 // Initial Room
@@ -73,7 +73,7 @@ window.onload = async function() {
     client.on('user-left',handleUserLeft)
 // }
 // }
-};   
+// };   
 // ask a user for access for microphone and camera permission (stored as array)
 let joinStrem = async () => {
     // hide the join button and display the 
